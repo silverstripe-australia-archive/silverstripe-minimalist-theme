@@ -1,0 +1,53 @@
+
+<div class="main typography">
+
+	<div class="full-banner">
+		<div class="row">
+			<div class="large-12 columns">
+				<div class="decor decor-icons">
+					<span class="typcn typcn-calendar-outline"></span>
+				</div>
+				<p class="title"><a href="$Parent.Link">$Parent.Title</a></p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+	
+		<div class="large-8 columns">
+			<h1>$Title</h1>
+			<div class="date-time">
+				<p>
+					$Date.Format("d M Y") <% if $Date != $EndDate %> to $EndDate.Format("d M Y")<% end_if %>
+					$StartTime.Nice - $EndTime.Nice
+				</p>
+			</div>
+			$Content
+		</div>
+		
+		<aside class="large-3 columns">
+			<% if Terms %>
+				<dl class="taxonomy bottom-divider">
+					<dt><span class="typcn typcn-tags"></span> Tags</dt>
+					<dd>
+						<ul class="inline-list">
+							<% loop Terms %>
+								<li class="label">$Name</li>
+							<% end_loop %>
+						</ul>
+					</dd>
+				</dl>
+			<% end_if %>
+			<a href="{$BaseHref}timeline?tags=$ClassName$ID" class="comment-list-trigger in-page-action" title="View comments" data-tooltip aria-haspopup="true">
+				<span class="typcn typcn-messages"></span>
+				<% if $ContextUser.UnreadPosts.count %>
+					<span class="comment-count comment-count-$ContextUser.UnreadPosts.count" >$ContextUser.UnreadPosts.count</span>
+				<% else %>
+					<span class="comment-count comment-count-0"></span>
+				<% end_if %>
+				<span class="visually-hidden"> comments</span>
+			</a>
+		</aside>
+	</div>
+	
+</div>

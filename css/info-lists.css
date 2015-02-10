@@ -1,0 +1,23 @@
+.list-saver { display: inline-block; }
+.default-save-placeholder { display: none }
+
+
+.list-save-field { margin-bottom: 1rem; }
+
+.list-save-info select, .list-save-info input, .list-save-info button {
+	width: 100%;
+}
+
+.list-save-info .list-save-field:last-child { margin-bottom: 0; }
+
+.list-item-save-form .modal-dialog {
+	width: 300px;
+}
+
+.save-list-item-content {
+	display: none;
+}
+
+.list-save-form-close {
+	float: right;
+}

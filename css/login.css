@@ -1,0 +1,56 @@
+body { }
+
+#header, .container.primary-container { position: static; width: 100%; max-width: 500px; margin: 0 auto; padding: 0; background: transparent; }
+#header { margin-top: 24px; margin-bottom: 12px; }
+.container.primary-container { background: transparent; }
+#ss { background: transparent; border-bottom: 0 none; }
+
+.primary-container > p { color: #b8b8b8; }
+
+.ui-tabs, .ui-tabs .ui-tabs-nav, .ui-tabs .ui-tabs-nav li.ui-tabs-active, 
+.ui-tabs .ui-tabs-nav li, .ss-tabset ul, .ss-tabset li { margin: 0; padding: 0; }
+
+ul.ui-tabs-nav, .ss-tabset ul { background: rgba(0,0,0,0.2); list-style: none; overflow: hidden; }
+
+.ss-tabset li { float: left; }
+.ui-tabs .ui-tabs-nav li a, .ss-tabset li a { background: rgba(255,255,255,0.25); color: #fff; border-top: 4px solid #2C4559; padding: 0.6em 1.2em; float: left; display: block; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a { color: #333; border-top: 4px solid #428BCA; background: #fff; }
+
+.ui-tabs .ui-tabs-panel, .ss-tabset .tab { background: #fff; }
+
+/* Login Form. */
+
+form { background: #fff; padding: 1em; }
+label { width: 6em; }
+.middleColumn { display: inline-block; }
+
+#MemberLoginForm_LoginForm_tab,
+#GoogleLoginForm_LoginForm_tab,
+#MemberLoginForm_LostPasswordForm {
+	padding: 12px 1.2em;
+}
+
+#MemberLoginForm_LoginForm_tab #Remember,
+#GoogleLoginForm_LoginForm_tab #Remember {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#MemberLoginForm_LoginForm_tab .Actions,
+#GoogleLoginForm_LoginForm_tab .Actions {
+	overflow: hidden;
+	padding: 0;
+}
+
+#MemberLoginForm_LoginForm_tab .Actions input,
+#GoogleLoginForm_LoginForm_tab .Actions input {
+	float: left;
+	vertical-align: middle;
+}
+
+#MemberLoginForm_LoginForm_tab .Actions p,
+#GoogleLoginForm_LoginForm_tab .Actions p {
+	float: right;
+}
+
+#GoogleLoginForm_LoginForm_tab .Actions input { background: #428BCA; padding: 0.6em 1.2em; color: #fff; font-weight: 600; }
