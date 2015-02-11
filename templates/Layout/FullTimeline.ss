@@ -35,18 +35,7 @@
 				<div class="large-12 columns">
 					<div class="postForm">
 						<% with PostForm %>
-							<form $FormAttributes >
-								<% with FieldMap %>
-									$Content
-									<input type="hidden" name="SecurityID" value="$SecurityID" />
-									$Up.Actions
-									<input type="button" name="uploadTrigger" value="Upload" />
-									<% if $PostTarget %>
-										<p>Include</p>
-										$PostTarget
-									<% end_if %>
-								<% end_with %>
-							</form>
+							<% include PostForm %>
 						<% end_with %>
 					</div>
 				</div>
