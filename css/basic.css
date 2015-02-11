@@ -82,7 +82,7 @@ ul.off-canvas-list li a:hover { background: rgba(255,255,255,0.2); }
 /* Tabs */
 
 .tabs dd > a, .tabs .tab-title > a { background: rgba(255,255,255,0.25); }
-.tabs .active a { border-top: 0.25rem solid #D6E2E2; padding-top: 0.75rem; }
+.tabs .active a, .tabs .tab-title > a:hover, .tabs .tab-title > a:focus { border-top: 0.25rem solid #D6E2E2; padding-top: 0.75rem; background: #fff; color: #121212; }
 
 /* ---------------------------------------------------------------------*/
 /* Forms and buttons                                                     
@@ -344,6 +344,7 @@ abbr.postTime { margin: 0; }
    ---------------------------------------------------------------------*/
   
 .MemberProfilePage .full-banner { background: #9caeaf; }
+.MemberProfilePage .my-posts .abstract { background: #f2f3f5; padding: 1rem; }
 
 /* ---------------------------------------------------------------------*/
 /* SlidesJS                                                     
