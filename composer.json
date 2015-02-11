@@ -1,0 +1,17 @@
+{
+    "name": "silverstripe-australia/ssau-minimalist",
+    "description": "A minimalist theme oriented towards intranets",
+    "type": "silverstripe-theme",
+    "keywords": ["silverstripe", "theme"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Grant Heggie",
+            "homepage": "http://www.silverstripe.com.au"
+        }
+    ],
+    "require": {
+        "composer/installers": "*",
+        "silverstripe/framework": ">=3.0"
+    }
+}
