@@ -232,6 +232,11 @@ body.SiteDashboardPage .bg-image { position: absolute; background-attachment: fi
 body.SiteDashboardPage .actions-panel { position: fixed; top: 2.8125rem; right: 0.75rem; }
 body.SiteDashboardPage .actions-panel a { display: block; margin-top: 10px; }
 
+ol.recent-dashlet { list-style: none; margin: 1rem 0 0 0; padding: 0; }
+ol.recent-dashlet li { border-bottom: 1px dotted #ccc; padding: 0.25rem 0; }
+.recent-dashlet .dashlet-item-info { float: left; width: 6rem; line-height: 2.18181; text-align: right; }
+.recent-dashlet a { display: block; margin-left: 7rem; line-height: 1.25; }
+
 /* ---------------------------------------------------------------------*/
 /* Events
    ---------------------------------------------------------------------*/
