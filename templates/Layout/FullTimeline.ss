@@ -41,7 +41,7 @@
 							<span class="label">Post&nbsp;something</span>
 						</a>
 					</p>
-					<div class="postForm f-dropdown content large" id="post-something" data-dropdown-content aria-hidden="true" tabindex="-1">
+					<div class="postForm f-dropdown content large" id="post-something" data-dropdown-content aria-hidden="true" aria-autoclose="false" tabindex="-1">
 						<% with PostForm %>
 							<% include PostForm %>
 						<% end_with %>
@@ -58,7 +58,7 @@
 
 		<div class="row">
 			<div class="feed-actions large-12 columns">
-				<a href="#" class="moreposts button expand">Load more...</a>
+				<a href="#" class="moreposts button secondary expand">Load more...</a>
 			</div>
 		</div>
 

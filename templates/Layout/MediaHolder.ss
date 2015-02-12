@@ -1,11 +1,12 @@
 <section class="main typography">
-	<div class="row">
+	<% include Breadcrumbs %>
+	<div class="row content-start">
 		<div class="large-12 columns">
 			<h1>$Title</h1>
 			$Content
 			<% if AllChildren %>
-				<% if checkMediaHolder %>
-					<% loop checkMediaHolder %>
+				<% if CheckMediaHolder %>
+					<% loop CheckMediaHolder %>
 						<div>
 							<h4><strong><a href='{$Link}'>{$Title}</a></strong></h4>
 							<div>{$Content.Summary}</div>

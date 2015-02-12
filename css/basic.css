@@ -81,7 +81,7 @@ ul.off-canvas-list li a:hover { background: rgba(255,255,255,0.2); }
 /* Breadcrumbs */
 
 .breadcrumbs { background: transparent; border: 0 none; padding: 1rem 0; }
-.breadcrumbs ? * { color: #859393; }
+.breadcrumbs > * { color: #859393; }
 
 /* Panel */
 
@@ -91,6 +91,12 @@ ul.off-canvas-list li a:hover { background: rgba(255,255,255,0.2); }
 
 .tabs dd > a, .tabs .tab-title > a { background: rgba(255,255,255,0.25); }
 .tabs .active a, .tabs .tab-title > a:hover, .tabs .tab-title > a:focus { border-top: 0.25rem solid #D6E2E2; padding-top: 0.75rem; background: #fff; color: #121212; }
+
+/* Dropdowns */
+.f-dropdown, .f-dropdown.content { font-size: 1rem; }
+.f-dropdown.content { padding: 1rem; }
+.f-dropdown .select2 li a { padding: 0; }
+.f-dropdown .select2 li:hover, .f-dropdown .select2 li:focus { background: transparent; }
 
 /* ---------------------------------------------------------------------*/
 /* Forms and buttons                                                     
@@ -102,7 +108,7 @@ fieldset > .field { margin-bottom: 1rem; }
 
 .field ul { margin-left: 0; }
 
-button, input[type="submit"], input[type="button"] {
+.button, button, input[type="submit"], input[type="button"] {
 	display: inline-block;
 	background-color: #009BC6;
 	border-color: #222e65;
@@ -123,7 +129,17 @@ button, input[type="submit"], input[type="button"] {
 	text-decoration: none;
 	transition: background-color 300ms ease-out 0s;
 }
-button:hover, input[type="submit"]:hover, input[type="button"]:hover { background: #0087AD; }
+.button, button:hover, input[type="submit"]:hover, input[type="button"]:hover { background: #0087AD; }
+
+
+button.secondary, .button.secondary { background: #89b7cc; color: #fff; }
+button.secondary.outline, .button.secondary.outline { color: #89b7cc; border: 1px solid; }
+
+button.outline, .button.outline { background: transparent; }
+button.outline:hover, .button.outline:hover { background: #009BC6; color: #fff; }
+button.secondary:hover, .button.secondary:hover { background: #89b7cc; color: #fff; border-color: #89b7cc; }
+
+button.tight, .button.tight { padding: 0.5rem 1rem 0.525rem 1rem; }
 
 select,
 textarea,
@@ -337,33 +353,42 @@ body.Calendar h2 { text-transform: uppercase; }
 .comment-count-0 { display: none; }
 
 div.postForm { margin: 1.75rem 0 2.25rem 0; }
-div.postForm > form { padding: 0; }
-.postReplies { margin-top: 1.75rem; }
-form.replyForm { margin: 0; }
+div.postForm.f-dropdown > form { padding: 1rem; background: #f2f3f5; }
+.reply form.replyForm { margin: 0; }
 form.replyForm .Actions { padding-top: 1rem; }
 form.replyForm .Actions .toggle-reply { }
+
 #StatusFeed div.microPost { background: transparent; position: relative; }
 #StatusFeed div.microPost.toplevel, #StatusFeed div.microPost.hasparent { border: 0 none; padding: 0; margin: 0; }
 div.microPost.unread { box-shadow: none; }
 #StatusFeed, .timeline-container #StatusFeed { background: transparent; padding: 0; }
+.microPost div.postOptions { float: none; }
 div.postText, div.postPreview { padding: 0; }
 div.postText { padding: 0 0 1.75rem 0; }
-div.postOptions, #StatusFeed div.postOptions, #StatusFeed div.postText { float: none; padding: 1rem 0; background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAYAAAAb4BS0AAAAD0lEQVQImWMQEhL6zwAFAAtWATZJEl6lAAAAAElFTkSuQmCC") repeat-x; }
 
+#StatusFeed .author, #StatusFeed div.postText { float: none; padding: 1rem 0; border-top: 2px solid; }
+.toplevel > .columns > .author:after { content: ''; display: block; width: 1.875rem; height: 2px; background: #000000; position: absolute; top: 0; right: -0.9375rem; }
+.details span.edited-mark { font-size: 1em; font-weight: normal; }
+.editButton, .deletePost, .details abbr.postTime { display: inline-block; }
+.details abbr.postTime { margin: 0; }
+.microPost .author .details { margin-bottom: 0; }
+.microPost .author .details > span:first-child { font-size: 1.25rem; font-weight: 700; display: inline-block; padding-right: 0.5rem; }
+.postOptions .deletePost, .postOptions .editButton, .permaLink .title { text-transform: uppercase; font-size: 0.6875rem; }
+
+.postReplies { margin-top: 1.75rem; }
 .postReplies div.microPost.hasparent { border-top: 0 none; }
-.postOptions .author .details { margin-bottom: 0; }
-.postOptions .author .details > span:first-child { font-size: 1.25rem; font-weight: 400; display: block; }
-.postOptions .editButton { text-transform: uppercase; font-size: 0.6875rem; }
-.details abbr.postTime { margin: 0; display: block; }
-
-.editPost, .deletePost, .details abbr.postTime { display: inline-block; }
 .postReplies .deletePost { margin-left: 0.5rem; }
-.postReplies .columns, .postReplies .columns:last-child { float: none; width: auto; padding: 0; }
-.postReplies .row { margin: 0; }
-.postReplies .postOptions .author, .postReplies .postOptions .author .details > span:first-child { display: inline-block; }
-.postReplies .postOptions .author .details > span { font-size: 1rem; padding-right: 0.5rem; }
+#StatusFeed .postReplies .author, .postReplies .author .details, .postReplies .microPost div.postOptions { display: inline-block; border-top: 0 none; }
+.microPost.hasparent .author .details > span { font-size: 1rem; padding-right: 0.5rem; }
+#StatusFeed .postReplies div.postText { border-top: 0 none; }
 
-#StatusFeed .postReplies div.postText { background: transparent; }
+.vote .upCount, .vote .downCount { margin: 0; }
+
+.button-group .vote.button { padding-left: 0; padding-right: 0; width: 5.5rem; background: #f2f3f5; border: 1px solid rgba(0,0,0,0.1); }
+
+div.TimelineDashlet .dashlet-content form textarea[name="Content"], form textarea[name="Content"] { width: 100%; max-width: none; margin-bottom: 1rem; }
+
+.microPost hr.thin { height: 1px; border: 0 none; background: #121212; opacity: 0.2; margin: 0; }
 
 /* ---------------------------------------------------------------------*/
 /* Member profile page                                                     
@@ -377,7 +402,7 @@ div.postOptions, #StatusFeed div.postOptions, #StatusFeed div.postText { float: 
 /* Search                                                     
    ---------------------------------------------------------------------*/
 
-.search-modal.open { bottom: auto; min-height: 0; height: auto; background: #273344; }
+.search-modal.open { bottom: auto; min-height: 0; height: auto; background: #273344; z-index: 10000; }
 .search-modal.open form { margin-top: 4rem; }
 .search-modal.open .extensible-search input { width: 100%; max-width: none; padding: 1.5rem; font-size: 1.25rem; background: rgba(255,255,255,0.25); box-shadow: none; border: 0 none; height: auto; color: #fff; }
 
