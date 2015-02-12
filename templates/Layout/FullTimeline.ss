@@ -33,7 +33,7 @@
 		<% if $ContextUser %>
 			<div class="row">
 				<div class="large-12 columns">
-					<p>
+					<p class="space-below-x2">
 						<a data-dropdown="post-something" aria-controls="post-something" aria-expanded="false">
 							<span class="outline round-icon">
 								<span class="typcn typcn-plus"></span>

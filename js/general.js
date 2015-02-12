@@ -31,6 +31,36 @@
 		}
 	});
 
+	// Comments/replies
+	$('a[data-dropdown="post-something"]').entwine({
+		onmatch: function() {
+			$(document).foundation('dropdown', 'reflow');
+		}
+	});
+	
+	
+	$('.microPostContent form.replyForm').entwine({
+		onmatch: function(){
+			this.addClass('visually-hidden');
+		}
+	});
+	$('.microPostContent .toggle-reply').entwine({
+		onclick: function(){
+			if (this.parent().hasClass('Actions')){
+				var $form = this.closest('form');	
+				$form.next('.toggle-reply').removeClass('visually-hidden');
+			}
+			else {
+				var $form = this.prev('form');
+				this.addClass('visually-hidden');
+			}
+			$form.toggleClass('visually-hidden');
+		}
+	});
+	
+	
+	
+	// Slides
 	var $slides = $('ul.slides');
 	if ($slides.length > 0){
 		$slides.each(function(){

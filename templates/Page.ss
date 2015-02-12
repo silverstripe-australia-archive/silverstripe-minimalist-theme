@@ -54,6 +54,7 @@
 				<div id="comments-modal" class="reveal-modal xlarge" data-reveal></div>
 			</div>
 		</div>
+		<% require javascript('framework/thirdparty/jquery-entwine/dist/jquery.entwine-dist.js') %>
 		<% require javascript('themes/ssau-minimalist/js/jquery.slides.min.js') %>
 		<% require javascript('themes/ssau-minimalist/js/general.js') %>
 		<% require javascript('intranet-demo/javascript/info-lists.js') %>
