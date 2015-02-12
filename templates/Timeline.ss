@@ -38,10 +38,12 @@
 							<textarea placeholder="Add reply..." name="Content" class="expandable postContent"></textarea>
 							<div class="Actions">
 								<input type="submit" value="Reply" name="action_savepost" />
-								<button class="no-style toggle-reply">Cancel</button>
+								<button class="no-style toggle-reply small">Cancel</button>
 							</div>
 						</form>
-						<button class="no-style toggle-reply"><span class="typcn typcn-arrow-forward-outline"></span> Reply</button>
+						<button class="no-style toggle-reply small">
+							<span class="typcn typcn-arrow-forward-outline"></span> Reply
+						</button>
 					</div>
 				<% end_if %>
 				<% if Top.ShowReplies %>

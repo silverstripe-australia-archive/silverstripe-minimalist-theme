@@ -26,6 +26,9 @@ button.char-icon { border: 0 none; }
 
 .label { line-height: 1.45454; }
 
+span.round-icon + .label { display: inline-block; background: transparent; color: inherit; text-transform: uppercase; }
+
+
 /* ---------------------------------------------------------------------*/
 /* Foundation element changes                                                     
    ---------------------------------------------------------------------*/
@@ -340,10 +343,11 @@ div.postOptions .author { background: url("data:image/png;base64,iVBORw0KGgoAAAA
 abbr.postTime { margin: 0; }
 
 /* ---------------------------------------------------------------------*/
-/* Microblog / commenting                                                     
+/* Member profile page                                                     
    ---------------------------------------------------------------------*/
   
 .MemberProfilePage .full-banner { background: #9caeaf; }
+.MemberProfilePage .my-posts .title { padding: 1.75rem 0 2.25rem 0; background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAYAAAAb4BS0AAAAD0lEQVQImWMQEhL6zwAFAAtWATZJEl6lAAAAAElFTkSuQmCC") repeat-x; }
 .MemberProfilePage .my-posts .abstract { background: #f2f3f5; padding: 1rem; }
 
 /* ---------------------------------------------------------------------*/

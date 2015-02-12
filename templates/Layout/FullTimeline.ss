@@ -1,8 +1,8 @@
-<section class="main typography">
+<section class="main typography content-start">
 	
 	<input type="hidden" id="MemberDetails" data-member='$MemberDetails.ATT' />
 	<input type="hidden" value="$PostForm.FormAction" id="PostFormUrl" />
-			
+
 	<div class="row">
 		<div class="large-12 columns">
 		<% if $ContextUser %>
@@ -33,7 +33,15 @@
 		<% if $ContextUser %>
 			<div class="row">
 				<div class="large-12 columns">
-					<div class="postForm">
+					<p>
+						<a data-dropdown="post-something" aria-controls="post-something" aria-expanded="false">
+							<span class="outline round-icon">
+								<span class="typcn typcn-plus"></span>
+							</span>
+							<span class="label">Post&nbsp;something</span>
+						</a>
+					</p>
+					<div class="postForm f-dropdown content large" id="post-something" data-dropdown-content aria-hidden="true" tabindex="-1">
 						<% with PostForm %>
 							<% include PostForm %>
 						<% end_with %>
@@ -52,8 +60,6 @@
 			<div class="feed-actions large-12 columns">
 				<a href="#" class="moreposts button expand">Load more...</a>
 			</div>
-		</div>
-
 		</div>
 
 	<% end_if %>

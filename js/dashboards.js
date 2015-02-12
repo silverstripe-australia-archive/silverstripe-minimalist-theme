@@ -1,5 +1,6 @@
 // Replication from frontend-dashboards/javascript/dashboards.js
 // with a fair bit removed and dialogs using Foundation Reveal
+
 ;(function($) {
 	$(function() {
 		var segment = 'dashboard';
@@ -115,7 +116,7 @@
 					}
 				})
 			}
-		})
+		});
 		
 		$('div.dashlet form.ajax-form').entwine({
 			onsubmit: function (e) {
@@ -130,7 +131,7 @@
 				
 				return false;
 			}
-		})
+		});
 
 	})
 })(jQuery);
