@@ -5,9 +5,17 @@
 		<article class="large-6 columns">
 			<h1>$Title</h1>
 
-			<p class="meta"><% if $getAttribute('Author').Content %>By <em>$getAttribute('Author').Content</em> on <% end_if %><em>$Date.Format('d M Y')</em></p>
+			<p class='meta'><% if $getAttribute('Author').Content %>By <em>$getAttribute('Author').Content</em> on <% end_if %><em>$Date.Format('d M Y')</em></p>
+			<p class='meta media-page-attributes'>
+				<% loop $MediaAttributes %>
+					<% if $Title != 'Author' && $Content %>
+						<span class='media-page-attribute {$TemplateClass}'><em><strong>{$Title}: </strong>{$Content}</em></span><br>
+					<% end_if %>
+				<% end_loop %>
+				<br>
+			</p>
 			<div class="media-page-content">$Content</div>
-			
+
 			$Form
 		</article>
 
@@ -26,7 +34,7 @@
 					<% end_loop %>
 				</ul>
 			<% end_if %>
-			
+
 				<% if $Tags %>
 				<dl class="tags">
 					<dt><span class="typcn typcn-tags"></span> Tags</dt>
@@ -44,7 +52,7 @@
 						<% include CommentsLinkText %>
 					</a>
 				</p>
-			
+
 		</aside>
 	</div>
 

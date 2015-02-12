@@ -59,6 +59,56 @@
 	});
 	
 	
+	$(document).on('click', 'a.comment-list-trigger', function (e) {
+		e.preventDefault();
+
+		var me = $(this);
+		setTimeout(function () {
+			var counter = me.find('.comment-count');
+			counter.addClass('comment-count-0').text('0');
+		}, 1000);
+		
+		
+		if (e.shiftKey) {
+			var url = $(this).attr('href');
+
+			var width = $(window).width() / 3;
+			var height = $(window).height();
+
+			var options = 
+				"all=no," +
+				"titlebar=no," + 
+				"scrollbars=yes," + 
+				"chrome=yes," +
+				"toolbar=no," +
+				"dialog=no," +
+				"resizable=yes," + 
+				"modal=no," +
+				"dependent=yes," +
+				"width="+width+"px," +
+				"height="+height+"px";
+
+			var sep = '?'; 
+			if (url.indexOf('?') > 0) {
+				sep = '&';
+			}
+			url += sep + 'popup=1';
+			var comments = window.open(url, 'comments', options);
+			comments.focus();
+		}
+		else {
+			$('#comments-modal')
+				.foundation('reveal', 'open', {
+					url: me.attr('href'),
+					dataFilter: function(data, type){
+						data = '<a class="close-reveal-modal">&times;</a><div class="modal-heading">Comments</div>' + data;
+						return data;
+					}
+				});
+		}
+
+		return false;
+	});
 	
 	// Slides
 	var $slides = $('ul.slides');

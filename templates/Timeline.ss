@@ -10,6 +10,10 @@
 		<div class="row">
 			<div class="microPost <% if $ParentID > 0 %>hasparent<% else %>toplevel <% if $Top.Options.ShowTitlesOnly %>collapsed-post<% end_if %> <% end_if %><% if $isUnreadByUser %> unread<% end_if %>" data-id="$ID" data-owner="$Owner.ID" data-parent="$ParentID" id="post$ID" data-rating="$WilsonRating" data-sortby="$Top.SortBy" data-editable="1">
 				
+				<% if $Top.Options.ShowTitlesOnly && $ParentID == 0 %>
+				<h3><a class="post-expander" data-id="post$ID" href="$Link" title="Link to view the full text of $Title.ATT">$Title</a></h3>
+				<% end_if %>
+				
 				<% if $ParentID == 0 %>
 					<div class="large-4 medium-4 columns">
 				<% else %>
@@ -71,16 +75,15 @@
 					<div class="large-8 medium-8 columns">
 				<% end_if %>
 
-					<% if $Top.Options.ShowTitlesInPost && $ParentID == 0 %>
-					<h3 class="micro-post-title">
-						<% if $Top.Options.ShowTitlesOnly %>
-						<a class="post-expander" data-id="post$ID" href="$Link" title="Link to view the full text of $Title.ATT">$Title</a>
-						<% else %>
-						$Title
-						<% end_if %>
-					</h3>
-					<% end_if %>
 					<div class="microPostContent postText typography">
+						<% if $Top.Options.ShowTitlesInPost && $ParentID == 0 %>
+						<h3 class="micro-post-title">
+							<% if not $Top.Options.ShowTitlesOnly %>
+							$Title
+							<% end_if %>
+						</h3>
+						<% end_if %>
+						
 						<% include PostContent %>
 					
 						<% if $ParentID == 0 || $Top.Options.Threaded %>

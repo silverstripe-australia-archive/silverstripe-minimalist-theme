@@ -385,6 +385,18 @@ div.postText { padding: 0 0 1.75rem 0; }
 .microPost.hasparent .author .details > span { font-size: 1rem; padding-right: 0.5rem; }
 #StatusFeed .hasparent div.postText { border-top: 0 none; }
 
+.collapsed-post div.author {
+	display: inline;
+	
+}
+
+#StatusFeed .collapsed-post .author, #StatusFeed .collapsed-post div.postText {
+	border-top: none;
+}
+.collapsed-post div.author p + p, .collapsed-post div.post-actions, .collapsed-post div.postOptions {
+	display: none;
+}
+
 .vote .upCount, .vote .downCount { margin: 0; }
 
 .button-group .vote.button { padding-left: 0; padding-right: 0; width: 5.5rem; background: #f2f3f5; border: 1px solid rgba(0,0,0,0.1); }
