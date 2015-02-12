@@ -45,7 +45,7 @@ button.no-style, button.no-style:hover, button.no-style:focus, buttton.no-style:
 
 .modal { overflow-y: auto; }
 .reveal-modal-bg { background: rgba(0, 0, 0, 0.75); position: fixed; }
-.reveal-modal, dialog { border: 0 none; box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
+.reveal-modal, dialog { border: 0 none; box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); z-index: 10000; }
 .reveal-modal .close-reveal-modal, dialog .close-reveal-modal { font-weight: normal; }
 .reveal-modal.full, dialog.full { box-shadow: none; }
 .reveal-modal.full { top: 0 !important; bottom: 0; overflow-y: auto; position: fixed; }
@@ -97,6 +97,9 @@ ul.off-canvas-list li a:hover { background: rgba(255,255,255,0.2); }
 .f-dropdown.content { padding: 1rem; }
 .f-dropdown .select2 li a { padding: 0; }
 .f-dropdown .select2 li:hover, .f-dropdown .select2 li:focus { background: transparent; }
+
+/* Tables */
+table tr th, table tr td { font-size: 1rem; }
 
 /* ---------------------------------------------------------------------*/
 /* Forms and buttons                                                     
@@ -231,10 +234,6 @@ header .top-bar-section li:not(.has-form) a:hover:not(.button) { background: rgb
 
 .content-start { margin-top: 4rem; }
 
-.dashlet-content .content-start {
-	margin-top: 0.25rem;
-}
-
 .full-banner { background: #282828; }
 
 header nav .top-bar-section .title { display: none; }
@@ -356,10 +355,6 @@ body.Calendar h2 { text-transform: uppercase; }
 
 .comment-count-0 { display: none; }
 
-div.TimelineDashlet .dashlet-content textarea[name="Content"] {
-	display: block;
-}
-
 div.postForm { margin: 1.75rem 0 2.25rem 0; }
 div.postForm.f-dropdown > form { padding: 1rem; background: #f2f3f5; }
 .reply form.replyForm { margin: 0; }
@@ -384,11 +379,11 @@ div.postText { padding: 0 0 1.75rem 0; }
 .postOptions .deletePost, .postOptions .editButton, .permaLink .title { text-transform: uppercase; font-size: 0.6875rem; }
 
 .postReplies { margin-top: 1.75rem; }
-.postReplies div.microPost.hasparent { border-top: 0 none; }
-.postReplies .deletePost { margin-left: 0.5rem; }
-#StatusFeed .postReplies .author, .postReplies .author .details, .postReplies .microPost div.postOptions { display: inline-block; border-top: 0 none; }
+#StatusFeed div.microPost.hasparent { border-top: 0 none; }
+.microPost.hasparent .deletePost { margin-left: 0.5rem; }
+#StatusFeed .hasparent .author, .hasparent .author .details, .microPost.hasparent div.postOptions { display: inline-block; border-top: 0 none; }
 .microPost.hasparent .author .details > span { font-size: 1rem; padding-right: 0.5rem; }
-#StatusFeed .postReplies div.postText { border-top: 0 none; }
+#StatusFeed .hasparent div.postText { border-top: 0 none; }
 
 .vote .upCount, .vote .downCount { margin: 0; }
 
@@ -399,7 +394,7 @@ div.TimelineDashlet .dashlet-content form textarea[name="Content"], form textare
 .microPost hr.thin { height: 1px; border: 0 none; background: #121212; opacity: 0.2; margin: 0; }
 
 /* ---------------------------------------------------------------------*/
-/* Member profile page                                                     
+/* Member Profile page                                                     
    ---------------------------------------------------------------------*/
   
 .MemberProfilePage .full-banner { background: #9caeaf; }
@@ -407,10 +402,17 @@ div.TimelineDashlet .dashlet-content form textarea[name="Content"], form textare
 .MemberProfilePage .my-posts .abstract { background: #f2f3f5; padding: 1rem; }
 
 /* ---------------------------------------------------------------------*/
+/* File Listing page                                                     
+   ---------------------------------------------------------------------*/
+
+.file-listing table { width: 100%; border: 0 none; }
+.file-listing table th { text-transform: uppercase; font-size: 0.75rem; font-weight: 400; }
+
+/* ---------------------------------------------------------------------*/
 /* Search                                                     
    ---------------------------------------------------------------------*/
 
-.search-modal.open { bottom: auto; min-height: 0; height: auto; background: #273344; z-index: 10000; }
+.search-modal.open { bottom: auto; min-height: 0; height: auto; background: #273344; }
 .search-modal.open form { margin-top: 4rem; }
 .search-modal.open .extensible-search input { width: 100%; max-width: none; padding: 1.5rem; font-size: 1.25rem; background: rgba(255,255,255,0.25); box-shadow: none; border: 0 none; height: auto; color: #fff; }
 

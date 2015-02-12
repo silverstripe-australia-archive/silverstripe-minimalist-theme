@@ -39,15 +39,21 @@
 				<div class="large-6 columns">
 					<% if $CurrentUser %>
 						<h2>Latest posts</h2>
-						<p><a href="timeline/user/$CurrentUser.ID">My timeline</a></p>
+						<p><a href="timeline">My timeline</a></p>
 						<div class="posts my-posts">
 							<% if $List('MicroPost').Filter('OwnerID', $CurrentUser.ID).Sort('Created DESC').Limit(10) %>
 								<% loop $List('MicroPost').Filter('OwnerID', $CurrentUser.ID).Sort('Created DESC') %>
 									<h3 class="title text-medium text-light no-space-below">$Title</h3>
 									<ul class="meta inline-list">
 										<li><span class="date">$LastEdited.Format('d M Y')</span></li>
-										<li>$NumReplies replies</li>
-										<li><a href="$Link">View thread</a></li>
+										<% if $ParentID == 0 %><li>$NumReplies replies</li><% end_if %>
+										<li>
+										<% if $ParentID == 0 %>
+											<a href="$Link">View thread</a>
+										<% else %>
+											<a href="$Parent.Link">View thread</a>
+										<% end_if %>
+										</li>
 									</ul>
 								<% end_loop %>
 							<% else %>
