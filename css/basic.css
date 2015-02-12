@@ -25,7 +25,7 @@ button.char-icon { border: 0 none; }
 .save-list-item-content { margin-top: 1rem; }
 
 .label { line-height: 1.45454; }
-
+.label.outline { background: transparent; border: 1px solid #9CAEAF; color: inherit; }
 span.round-icon + .label { display: inline-block; background: transparent; color: inherit; text-transform: uppercase; }
 
 
@@ -77,6 +77,7 @@ ul.off-canvas-list li a:hover { background: rgba(255,255,255,0.2); }
 /* Breadcrumbs */
 
 .breadcrumbs { background: transparent; border: 0 none; padding: 1rem 0; }
+.breadcrumbs ? * { color: #859393; }
 
 /* Panel */
 
@@ -269,6 +270,8 @@ ol.recent-dashlet li { border-bottom: 1px dotted #ccc; padding: 0.25rem 0; }
    ---------------------------------------------------------------------*/
 
 body.CalendarEvent .full-banner, body.Calendar .full-banner { padding: 1.25rem 0; background: #1A3B63; overflow: hidden; }
+body.Calendar h2 { text-transform: uppercase; }
+
 .full-banner, .full-banner h1 { color: #fff; font-weight: 300; }
 .typography .full-banner a { color: #fff; }
 .full-banner .decor-icons { overflow: hidden; position: absolute; left: 2rem; }
@@ -288,7 +291,8 @@ body.CalendarEvent .full-banner, body.Calendar .full-banner { padding: 1.25rem 0
 .calendar-widget-table tbody .today { background: #F7F5ED; }
 .full-banner .rss { right: 0.9375rem; }
 
-#event-calendar-events .vevent { border: 0 none; padding: 1.75rem 0 2.25rem 0; background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAYAAAAb4BS0AAAAD0lEQVQImWMQEhL6zwAFAAtWATZJEl6lAAAAAElFTkSuQmCC") repeat-x; }
+#event-calendar-events .vevent { border: 0 none; padding: 1.75rem 0 2.25rem 0; }
+#event-calendar-events .vevent .dates { font-size: 0.75rem; font-weight: 700; color: #121212; }
 
 /* ---------------------------------------------------------------------*/
 /* News                                            
@@ -354,8 +358,8 @@ abbr.postTime { margin: 0; }
 /* SlidesJS                                                     
    ---------------------------------------------------------------------*/
 
-ul.slides { }
-ul.slides { margin: 0; padding: 0; list-style: none; }
+
+ul.slides { margin: 1.25rem 0; padding: 0; list-style: none; }
 .slides .slidesjs-container { z-index: 1; }
 .slides .slidesjs-navigation  { z-index:2; font-size: 1.5rem; line-height: 1; margin-left: 5rem; overflow: hidden; position: absolute; }
 .slides .slidesjs-next { margin-left: 6.5rem; }

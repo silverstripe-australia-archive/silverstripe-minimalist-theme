@@ -8,6 +8,9 @@
 		</div>
 		<div class="large-3 columns">
 			<div class="actions-panel" data-saveable-info="$ClassName-$ID"></div>
+			<a href="{$BaseHref}timeline?tags=$ClassName$ID" class="comment-list-trigger in-page-action" title="View comments" data-tooltip aria-haspopup="true">
+				<% include CommentsLinkText %>
+			</a>
 		</div>
 	</div>
 </section>

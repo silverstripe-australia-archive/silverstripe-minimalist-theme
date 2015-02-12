@@ -3,9 +3,6 @@
 	<div class="banner full-banner">
 		<div class="row has-title has-buttons">
 			<div class="large-6 columns">
-				<div class="decor decor-icons">
-					<span class="typcn typcn-calendar-outline"></span>
-				</div>
 				<h1 class="title small-title">$Title</h1>
 			</div>
 			<div class="large-3 columns">
@@ -26,6 +23,7 @@
 			$Content
 			
 			<h2 class="text-medium text-light">$DateHeader</h2>
+
 			<% if Events %>
 				<div id="event-calendar-events">
 					<% include EventList %>

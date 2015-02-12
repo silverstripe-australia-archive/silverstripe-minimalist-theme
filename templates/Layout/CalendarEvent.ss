@@ -5,13 +5,10 @@
 	<div class="banner full-banner">
 		<div class="row">
 			<div class="large-12 columns">
-				<div class="decor decor-icons">
-					<span class="typcn typcn-calendar-outline"></span>
-				</div>
 				<p class="title">
 					<a class="white" href="$Parent.Link">
 						<span class="typcn typcn-arrow-back"></span>
-						<span class="text-small">$Parent.Title</span>
+						<span class="text-medium">$Parent.Title</span>
 					</a>
 				</p>
 			</div>
@@ -37,13 +34,7 @@
 			<% include TermsListing %>
 
 			<a href="{$BaseHref}timeline?tags=$ClassName$ID" class="comment-list-trigger in-page-action" title="View comments" data-tooltip aria-haspopup="true">
-				<span class="typcn typcn-messages"></span>
-				<% if $ContextUser.UnreadPosts.count %>
-					<span class="comment-count comment-count-$ContextUser.UnreadPosts.count" >$ContextUser.UnreadPosts.count</span>
-				<% else %>
-					<span class="comment-count comment-count-0"></span>
-				<% end_if %>
-				<span class="visually-hidden"> comments</span>
+				<% include CommentsLinkText %>
 			</a>
 		</aside>
 	</div>

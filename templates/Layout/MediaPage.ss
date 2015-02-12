@@ -26,8 +26,9 @@
 					<% end_loop %>
 				</ul>
 			<% end_if %>
-			<dl class="tags">
+			
 				<% if $Tags %>
+				<dl class="tags">
 					<dt><span class="typcn typcn-tags"></span> Tags</dt>
 					<dd>
 						<ul class="inline-list tight">
@@ -36,19 +37,14 @@
 							<% end_loop %>
 						</ul>
 					</dd>
+				</dl>
 				<% end_if %>
-				<dt><span class="typcn typcn-message"></span> Comments</dt>
-					<dd class="postComments">
-						<a href="{$BaseHref}timeline?tags=$ClassName$ID" class="comment-list-trigger in-page-action" data-reveal-id="comments-modal" data-reveal-ajax="true" title="View comments" data-tooltip aria-haspopup="true">
-						<% if $ContextUser.UnreadPosts.count %>
-							<span class="comment-count comment-count-$ContextUser.UnreadPosts.count" >$ContextUser.UnreadPosts.count</span>
-						<% else %>
-							<span class="comment-count comment-count-0"></span>
-						<% end_if %>
-						comments
-						</a>
-					</dd>
-			</dl>
+				<p class="postComments">
+					<a href="{$BaseHref}timeline?tags=$ClassName$ID" class="comment-list-trigger in-page-action" data-reveal-id="comments-modal" data-reveal-ajax="true" title="View comments" data-tooltip aria-haspopup="true">
+						<% include CommentsLinkText %>
+					</a>
+				</p>
+			
 		</aside>
 	</div>
 
