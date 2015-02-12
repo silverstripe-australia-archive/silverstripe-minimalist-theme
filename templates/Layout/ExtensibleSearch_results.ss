@@ -1,9 +1,3 @@
-<aside class="middle-collapse">
-	<p class="title">Search options</p>
-	<div class="content">
-		$Form
-	</div>
-</aside>
 <section class="main typography">
 	<h1>Search results</h1>
 	<% if FacetCrumbs %>
