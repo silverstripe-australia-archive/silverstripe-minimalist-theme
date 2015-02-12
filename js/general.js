@@ -38,12 +38,6 @@
 		}
 	});
 	
-	
-	$('.microPostContent form.replyForm').entwine({
-		onmatch: function(){
-			this.addClass('visually-hidden');
-		}
-	});
 	$('.microPostContent .toggle-reply').entwine({
 		onclick: function(){
 			if (this.parent().hasClass('Actions')){
