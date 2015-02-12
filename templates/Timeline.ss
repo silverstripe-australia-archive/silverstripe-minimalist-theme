@@ -71,7 +71,9 @@
 							<textarea placeholder="Add reply..." name="Content" class="expandable postContent"></textarea>
 							<div class="Actions">
 								<input type="submit" value="Reply" name="action_savepost" />
+								<% if not $Top.Options.ShowReply %>
 								<button class="no-style toggle-reply small">Cancel</button>
+								<% end_if %>
 							</div>
 						</form>
 					</div>
