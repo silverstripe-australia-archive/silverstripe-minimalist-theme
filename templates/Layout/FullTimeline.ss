@@ -33,15 +33,8 @@
 		<% if $ContextUser %>
 			<div class="row">
 				<div class="large-12 columns">
-					<p class="space-below-x2">
-						<a data-dropdown="post-something" aria-controls="post-something" aria-expanded="false">
-							<span class="outline round-icon">
-								<span class="typcn typcn-plus"></span>
-							</span>
-							<span class="label">Post&nbsp;something</span>
-						</a>
-					</p>
-					<div class="postForm f-dropdown content large" id="post-something" data-dropdown-content aria-hidden="true" aria-autoclose="false" tabindex="-1">
+					
+					<div class="postForm content large" id="post-something">
 						<% with PostForm %>
 							<% include PostForm %>
 						<% end_with %>

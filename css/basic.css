@@ -402,7 +402,7 @@ div.postText { padding: 0 0 1.75rem 0; }
 .button-group .vote.button { padding-left: 0; padding-right: 0; width: 5.5rem; background: #f2f3f5; border: 1px solid rgba(0,0,0,0.1); }
 
 div.TimelineDashlet .dashlet-content form textarea[name="Content"], form textarea[name="Content"] { width: 100%; max-width: none; margin-bottom: 1rem; }
-
+div.TimelineDashlet .content-start { margin-top: 0.24rem; }
 .microPost hr.thin { height: 1px; border: 0 none; background: #121212; opacity: 0.2; margin: 0; }
 
 /* ---------------------------------------------------------------------*/
