@@ -13,7 +13,7 @@
 						</div>
 					<% end_loop %>
 				<% else %>
-					<% loop getPaginatedChildren(5, true) %>
+					<% loop PaginatedChildren %>
 						<div class='media-holder'>
 							<h4><strong><a href='<% if $ExternalLink %>{$ExternalLink}<% else_if not $Content && Attachments.count == 1 %>$Attachments.first.Link<% else %>{$Link}<% end_if %>' class='<% if $ExternalLink %>external<% else %>media-page<% end_if %>'<% if $ExternalLink %> target='_blank'<% end_if %>>{$Title}</a></strong></h4>
 							<div><em>{$Date.Nice}</em></div>
@@ -43,20 +43,20 @@
 							</div>
 						</div>
 					<% end_loop %>
-					<% if  getPaginatedChildren(5, true).MoreThanOnePage %>
+					<% if PaginatedChildren.MoreThanOnePage %>
 						<div>
-							<% if  getPaginatedChildren(5, true).NotFirstPage %>
-								<span><a href='{$Top.Link}?{$getPaginatedChildren(5, true).PaginationGetVar}={$getPaginatedChildren(5, true).PaginationPrevious}'>Previous</a></span>
+							<% if PaginatedChildren.NotFirstPage %>
+								<span><a href='{$Top.Link}?{$PaginatedChildren.PaginationGetVar}={$PaginatedChildren.PaginationPrevious}'>Previous</a></span>
 							<% end_if %>
-							<% loop  getPaginatedChildren(5, true).Pages %>
+							<% loop PaginatedChildren.Pages %>
 								<% if $CurrentBool %>
 									<span>{$PageNum}</span>
 								<% else %>
 									<span><a href='{$Top.Link}?{$Up.PaginationGetVar}={$Up.getPaginationNumber($PageNum)}'>{$PageNum}</a></span>
 								<% end_if %>
 							<% end_loop %>
-							<% if  getPaginatedChildren(5, true).NotLastPage %>
-								<span><a href='{$Top.Link}?{$getPaginatedChildren(5, true).PaginationGetVar}={$getPaginatedChildren(5, true).PaginationNext}'>Next</a></span>
+							<% if PaginatedChildren.NotLastPage %>
+								<span><a href='{$Top.Link}?{$PaginatedChildren.PaginationGetVar}={$PaginatedChildren.PaginationNext}'>Next</a></span>
 							<% end_if %>
 						</div>
 					<% end_if %>
