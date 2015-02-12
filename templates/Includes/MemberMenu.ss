@@ -32,6 +32,13 @@
 		</li>
 	<% end_with %>
 <% end_if %>
+	<% if $List('ExtensibleSearchPage').First %>
+	<li class="icon">
+		<a data-reveal-id="searchform-modal" href="#">
+			<span class="typcn typcn-zoom"></span>
+		</a>
+	</li>
+	<% end_if %>
 	<li class="icon">
 		<a href="#" class="right-off-canvas-toggle" aria-expanded="false" title="Open menu">
 			<span class="typcn typcn-th-menu"></span>

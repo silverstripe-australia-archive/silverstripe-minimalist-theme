@@ -13,6 +13,8 @@ body, html { min-height: 100%; }
   margin: -1px; padding: 0; border: 0; 
 }
 
+ul.plain { list-style: none; margin: 0; padding: 0; }
+
 .columns > h1:first-child, .columns > h2:first-child, .columns > h3:first-child { margin-top: 0; }
 
 a.char-icon { display: inline-block; line-height: 1.75; }
@@ -372,9 +374,23 @@ div.postOptions, #StatusFeed div.postOptions, #StatusFeed div.postText { float: 
 .MemberProfilePage .my-posts .abstract { background: #f2f3f5; padding: 1rem; }
 
 /* ---------------------------------------------------------------------*/
-/* SlidesJS                                                     
+/* Search                                                     
    ---------------------------------------------------------------------*/
 
+.search-modal.open { bottom: auto; min-height: 0; height: auto; background: #273344; }
+.search-modal.open form { margin-top: 4rem; }
+.search-modal.open .extensible-search input { width: 100%; max-width: none; padding: 1.5rem; font-size: 1.25rem; background: rgba(255,255,255,0.25); box-shadow: none; border: 0 none; height: auto; color: #fff; }
+
+header .searchPageForm { padding: 1.25rem; position: absolute; width: 100%; top: 2.8125rem; }
+header .searchPageForm div { float: left; }
+header .searchPageForm { }
+.results-list li { padding: 1.25rem 0; background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAYAAAAb4BS0AAAAD0lEQVQImWMQEhL6zwAFAAtWATZJEl6lAAAAAElFTkSuQmCC") repeat-x; }
+.results-list h2 { margin: 0 0 0.5rem 0; }
+.results-list .summary { margin-bottom: 0; }
+
+/* ---------------------------------------------------------------------*/
+/* SlidesJS                                                     
+   ---------------------------------------------------------------------*/
 
 ul.slides { margin: 1.25rem 0; padding: 0; list-style: none; }
 .slides .slidesjs-container { z-index: 1; }

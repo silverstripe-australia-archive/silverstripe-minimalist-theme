@@ -36,8 +36,9 @@
 						</section>
 					</nav>
 					<% include MainMenu %>
-					$SearchForm
-		
+					<div id="searchform-modal" class="reveal-modal full search-modal" data-reveal>
+						$SearchForm
+					</div>
 				</header>
 				
 				<% end_if %>
