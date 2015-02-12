@@ -215,6 +215,10 @@ header .top-bar-section li:not(.has-form) a:hover:not(.button) { background: rgb
 
 .content-start { margin-top: 4rem; }
 
+.dashlet-content .content-start {
+	margin-top: 0.25rem;
+}
+
 .full-banner { background: #282828; }
 
 header nav .top-bar-section .title { display: none; }
@@ -336,6 +340,10 @@ body.Calendar h2 { text-transform: uppercase; }
 
 .comment-count-0 { display: none; }
 
+div.TimelineDashlet .dashlet-content textarea[name="Content"] {
+	display: block;
+}
+
 div.postForm { margin: 1.75rem 0 2.25rem 0; }
 div.postForm > form { padding: 0; }
 .postReplies { margin-top: 1.75rem; }
@@ -351,15 +359,19 @@ div.postText { padding: 0 0 1.75rem 0; }
 div.postOptions, #StatusFeed div.postOptions, #StatusFeed div.postText { float: none; padding: 1rem 0; background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAYAAAAb4BS0AAAAD0lEQVQImWMQEhL6zwAFAAtWATZJEl6lAAAAAElFTkSuQmCC") repeat-x; }
 
 .postReplies div.microPost.hasparent { border-top: 0 none; }
+.postOptions .author { display: inline-block;} 
 .postOptions .author .details { margin-bottom: 0; }
-.postOptions .author .details > span:first-child { font-size: 1.25rem; font-weight: 400; display: block; }
+.postOptions .author .details > span:first-child { font-size: 1.25rem; font-weight: 400; display: inline-block; }
 .postOptions .editButton { text-transform: uppercase; font-size: 0.6875rem; }
 .details abbr.postTime { margin: 0; display: block; }
+.postOptions .post-actions { display: inline-block;}
+
 
 .editPost, .deletePost, .details abbr.postTime { display: inline-block; }
 .postReplies .deletePost { margin-left: 0.5rem; }
 .postReplies .columns, .postReplies .columns:last-child { float: none; width: auto; padding: 0; }
 .postReplies .row { margin: 0; }
+.postReplies { margin-left: 2.25rem;} 
 .postReplies .postOptions .author, .postReplies .postOptions .author .details > span:first-child { display: inline-block; }
 .postReplies .postOptions .author .details > span { font-size: 1rem; padding-right: 0.5rem; }
 

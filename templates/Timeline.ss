@@ -8,10 +8,10 @@
 
 	<% loop Posts %>
 		<div class="microPost row <% if $ParentID > 0 %>hasparent<% else %>toplevel <% if $Top.Options.ShowTitlesOnly %>collapsed-post<% end_if %> <% end_if %><% if $isUnreadByUser %> unread<% end_if %>" data-id="$ID" data-owner="$Owner.ID" data-parent="$ParentID" id="post$ID" data-rating="$WilsonRating" data-sortby="$Top.SortBy" data-editable="1">
-			<div class="postOptions large-3 columns">
+			<div class="postOptions large-8 columns">
 				<div class="author">
 					<p class="details">
-						<span><% if $Owner.ID == $ContextUser.ID %>Me<% else %>$Owner.FirstName<% end_if %></span><br />
+						<span class="author-name"><% if $Owner.ID == $ContextUser.ID %>Me<% else %>$Owner.FirstName<% end_if %></span>
 						<abbr class="meta postTime" title="$Created" data-created="$Created">$Created.Format("d M Y")</abbr>
 						<% if $isEdited %>
 							<span class="edited-mark" title="Edited at $LastEdited">*</span>
@@ -58,7 +58,7 @@
 			</h3>
 			<% end_if %>
 				
-			<div class="microPostContent postText typography large-8 columns">
+			<div class="microPostContent postText typography large-11 columns">
 				<% include PostContent %>
 				
 				<% if $ParentID == 0 || $Top.Options.Threaded %>
