@@ -1,4 +1,4 @@
-<section class="main typography">
+<section class="main typography content-start">
 	<div class="row">
 		<div class="large-12 columns">
 			<h1>Search results</h1>

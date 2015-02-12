@@ -44,11 +44,11 @@ button.no-style, button.no-style:hover, button.no-style:focus, buttton.no-style:
 /* Reveal modals */
 
 .modal { overflow-y: auto; }
-.reveal-modal-bg { background: rgba(0, 0, 0, 0.75); }
+.reveal-modal-bg { background: rgba(0, 0, 0, 0.75); position: fixed; }
 .reveal-modal, dialog { border: 0 none; box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
 .reveal-modal .close-reveal-modal, dialog .close-reveal-modal { font-weight: normal; }
 .reveal-modal.full, dialog.full { box-shadow: none; }
-.reveal-modal.full { top: 0 !important; bottom: 0; }
+.reveal-modal.full { top: 0 !important; bottom: 0; overflow-y: auto; position: fixed; }
 
 .reveal-modal .modal-heading.buttons-1 { margin-left: 2.5rem; }
 .reveal-modal .modal-heading.buttons-2 { margin-left: 5rem; }
