@@ -15,7 +15,8 @@ h4 { font-size: 1.2em; margin: 1rem 0; }
 h1.large { font-size: 3.5em; }
 h2.large { font-size: 2.5em; }
 
-p, ol, ul { margin-bottom: 1em; font-size: 1em; }
+p, ol, ul { margin-bottom: 1rem; font-size: 1rem; }
+.space-below-x2 { margin-bottom: 2rem; }
 
 a, a:visited { color: #00A1CE; }
 
@@ -26,7 +27,7 @@ a, a:visited { color: #00A1CE; }
 .space-above { margin-top: 1em; }
 .space-below { margin-bottom: 1em; }
 
-.meta, .dashlet-item-info { font-size: 0.6875rem; color: #aaaaaa; text-transform: uppercase; }
+.meta, .dashlet-item-info { font-size: 0.6875rem; color: #859393; text-transform: uppercase; }
 .meta em { font-style: normal; font-weight: 400; color: #121212; }
 
 .typography { font-family: Roboto; }
@@ -35,6 +36,7 @@ p, ol, ul, blockquote, label { font-weight: 300; }
 
 .text-small { font-size: 0.75rem; }
 .text-medium { font-size: 1rem; }
+.text-large { font-size: 1.25rem; }
 .text-light { font-weight: 300; }
 
 .text-right { text-align: right; }
