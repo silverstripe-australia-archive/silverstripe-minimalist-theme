@@ -11,15 +11,7 @@
 		<a href="$Link(adddashlet)" title="Add a dashlet" data-reveal-id="add-dashlet-modal" data-reveal-ajax="true">
 			<span class="typcn typcn-plus"></span>
 		</a>
-		<a href="timeline" class="comment-list-trigger" title="Comments ($ContextUser.UnreadPosts.count unread)">
-			<span class="typcn typcn-messages"></span>
-			<% if $ContextUser.UnreadPosts.count %>
-			<span class="comment-count comment-count-$ContextUser.UnreadPosts.count" >$ContextUser.UnreadPosts.count</span>
-			<% else %>
-			<span class="comment-count comment-count-0"></span>
-			<% end_if %>
-			<span class="visually-hidden">Comments</span>
-		</a>
+		<% include Commenter %>
 	</div>
 </div>
 

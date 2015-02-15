@@ -48,9 +48,7 @@
 				</dl>
 				<% end_if %>
 				<p class="postComments">
-					<a href="{$BaseHref}timeline?tags=$ClassName$ID" class="comment-list-trigger in-page-action" data-reveal-id="comments-modal" data-reveal-ajax="true" title="View comments" data-tooltip aria-haspopup="true">
-						<% include CommentsLinkText %>
-					</a>
+					<% include Commenter Targeted=1 %>
 				</p>
 
 		</aside>

@@ -33,9 +33,7 @@
 			</div>
 			<% include TermsListing %>
 
-			<a href="{$BaseHref}timeline?tags=$ClassName$ID" class="comment-list-trigger in-page-action" title="View comments" data-tooltip aria-haspopup="true">
-				<% include CommentsLinkText %>
-			</a>
+			<% include Commenter Targeted=1 %>
 		</aside>
 	</div>
 
