@@ -447,3 +447,25 @@ ul.slides { margin: 1.25rem 0; padding: 0; list-style: none; }
 @media screen and (max-width: 1200px) {
 
 }
+
+@media screen and (max-width: 640px) {
+	.microPost .author p, .microPost .post-actions ul {
+		margin: 0px;
+		display: inline-block;
+	}
+	
+	.microPost .author, .microPost .post-actions, .microPost .postOptions {
+		display: inline-block;
+	}
+	
+	#StatusFeed .microPost .author {
+		border: none;
+	}
+	
+	.toplevel > .columns > .author:after { content: ''; display: none;  }
+	
+	#post-something .button, button, input[type="submit"], input[type="button"] {
+		font-size: 0.8rem;
+		padding: 0.5rem 1rem;
+	}
+}
