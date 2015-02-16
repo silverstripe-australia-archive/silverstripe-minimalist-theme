@@ -44,13 +44,15 @@
 								<ul class="inline-list">
 									<li>
 										<a href="#" class="vote" data-dir="1" data-id="$ID" title="Vote up">
-											<span class="typcn typcn-thumbs-up text-medium"></span><span class="upCount">$Up</span>
+											<span class="typcn typcn-thumbs-up text-medium"></span>
 										</a>
+										<span class="upCount">$Up</span>
 									</li>
 									<li>
 										<a href="#" class="vote" data-dir="-1" data-id="$ID" title="Vote down">
-											<span class="typcn typcn-thumbs-down text-medium"></span><span class="downCount">$Down</span>
+											<span class="typcn typcn-thumbs-down text-medium"></span>
 										</a>
+										<span class="downCount">$Down</span>
 									</li>
 								</ul>
 							<% end_if %>
