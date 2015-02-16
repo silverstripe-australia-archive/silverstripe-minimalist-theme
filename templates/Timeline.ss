@@ -75,7 +75,7 @@
 					<div class="large-8 medium-8 columns">
 				<% end_if %>
 
-					<div class="microPostContent postText typography">
+					<div class="microPostContent typography">
 						<% if $Top.Options.ShowTitlesInPost && $ParentID == 0 %>
 						<h3 class="micro-post-title">
 							<% if not $Top.Options.ShowTitlesOnly %>
@@ -84,7 +84,9 @@
 						</h3>
 						<% end_if %>
 						
+						<div class="postText">
 						<% include PostContent %>
+						</div>
 					
 						<% if $ParentID == 0 || $Top.Options.Threaded %>
 							<%-- note that the action is left blank and filled in with JS because otherwise the
