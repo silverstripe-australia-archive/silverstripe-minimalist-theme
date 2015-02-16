@@ -8,7 +8,7 @@
 
 	<% loop Posts %>
 		<div class="row">
-			<div class="microPost <% if $ParentID > 0 %>hasparent<% else %>toplevel <% if $Top.Options.ShowTitlesOnly %>collapsed-post<% end_if %> <% end_if %><% if $isUnreadByUser %> unread<% end_if %>" data-id="$ID" data-owner="$Owner.ID" data-parent="$ParentID" id="post$ID" data-rating="$WilsonRating" data-sortby="$Top.SortBy" data-editable="1">
+			<div class="microPost row <% if $ParentID > 0 %>hasparent<% else %>toplevel <% if $Top.Options.ShowTitlesOnly %>collapsed-post<% end_if %> <% end_if %><% if $isUnreadByUser %> unread<% end_if %>" data-id="$ID" data-owner="$Owner.ID" data-parent="$ParentID" id="post$ID" data-rating="$WilsonRating" data-sortby="$Top.SortBy" data-editable="1">
 				
 				<% if $Top.Options.ShowTitlesOnly && $ParentID == 0 %>
 				<h3><a class="post-expander" data-id="post$ID" href="$Link" title="Link to view the full text of $Title.ATT">$Title</a></h3>
