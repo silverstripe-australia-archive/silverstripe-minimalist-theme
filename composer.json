@@ -12,6 +12,7 @@
     ],
     "require": {
         "composer/installers": "*",
-        "silverstripe/framework": ">=3.0"
+        "silverstripe/framework": ">=3.0",
+		"silverstripe-australia/minimalist-theme-helper": "~1.0"
     }
 }
