@@ -1,5 +1,5 @@
 {
-    "name": "silverstripe-australia/ssau-minimalist",
+    "name": "silverstripe-australia/minimalist-theme",
     "description": "A minimalist theme oriented towards intranets",
     "type": "silverstripe-theme",
     "keywords": ["silverstripe", "theme"],
@@ -14,5 +14,8 @@
         "composer/installers": "*",
         "silverstripe/framework": ">=3.0",
 		"silverstripe-australia/minimalist-theme-helper": "~1.0"
+    },
+	"extra": {
+		"installer-name": "ssau-minimalist"
     }
 }
