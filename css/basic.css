@@ -233,6 +233,7 @@ header .top-bar-section li:not(.has-form) a:hover:not(.button) { background: rgb
 .bottom-divider { padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px dotted rgba(0,0,0,0.2); }
 
 .content-start { margin-top: 4rem; }
+.reveal-modal section.content-start { margin-top: 0; }
 
 .full-banner { background: #282828; }
 
@@ -254,7 +255,7 @@ header nav .top-bar-section .title { display: none; }
 
 .list-saver { padding: 0; float: none; }
 
-.reveal-modal .modal-heading { font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; }
+.reveal-modal .modal-heading { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
 .reveal-modal .modal-heading + button { position: absolute; top: 2rem; }
 
 /* ---------------------------------------------------------------------*/
@@ -355,7 +356,7 @@ body.Calendar h2 { text-transform: uppercase; }
 
 .comment-count-0 { display: none; }
 
-div.postForm { margin: 1.75rem 0 2.25rem 0; }
+div.postForm { margin: 0.25rem 0 2.25rem 0; }
 div.postForm.f-dropdown > form { padding: 1rem; background: #f2f3f5; }
 .reply form.replyForm { margin: 0; }
 form.replyForm .Actions { padding-top: 1rem; }
