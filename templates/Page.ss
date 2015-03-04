@@ -44,7 +44,11 @@
 				<% end_if %>
 				<a class="exit-off-canvas"></a>
 				<div class="container <% if $HideHeader %>hide-wrapping<% end_if %> primary-container<% if CSSClassesFor('Body') %> $CSSClassesFor('Body')<% end_if %>">
+					$PreLayout
+					
 					$Layout
+					
+					$PostLayout
 				</div>
 		 
 				$Footer
@@ -55,10 +59,7 @@
 				<div id="comments-modal" class="reveal-modal xlarge" data-reveal></div>
 			</div>
 		</div>
-		<% require javascript('framework/thirdparty/jquery-entwine/dist/jquery.entwine-dist.js') %>
-		<% require javascript('themes/ssau-minimalist/js/jquery.slides.min.js') %>
-		<% require javascript('themes/ssau-minimalist/js/general.js') %>
-		<% require javascript('intranet-sis/javascript/info-lists.js') %>
+		
 	</body>
 </html>
 
