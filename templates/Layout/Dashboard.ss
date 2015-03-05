@@ -17,5 +17,3 @@
 
 <div id="add-dashlet-modal" class="reveal-modal small" data-reveal></div>
 <div id="edit-dashlet-modal" class="reveal-modal small" data-reveal></div>
-
-<% require javascript('themes/ssau-minimalist/js/dashboards.js') %>
