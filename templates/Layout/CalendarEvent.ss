@@ -30,10 +30,9 @@
 						<span class="typcn typcn-calendar-outline"></span>
 					</a>
 				<% end_with %>
+				<% include Commenter Targeted=1 %>
 			</div>
 			<% include TermsListing %>
-
-			<% include Commenter Targeted=1 %>
 		</aside>
 	</div>
 

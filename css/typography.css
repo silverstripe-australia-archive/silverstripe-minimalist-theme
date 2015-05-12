@@ -1,14 +1,14 @@
 @import url(//fonts.googleapis.com/css?family=Roboto:300,400,700);
 @import url(typicons.min.css);
 
-body { font-family: Roboto, Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.5; color: #121212; font-weight: 300; }
+body { font-family: Roboto, Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.5; color: #333838; font-weight: 300; }
 
 .label { font-family: Roboto, Arial, Helvetica, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 { font-family: Roboto, Arial, Helvetica, sans-serif; font-weight: 600; margin: 0; }
 
 h1 { font-size: 2.5em; letter-spacing: -1px; margin: 0 0 2rem 0; font-weight: 700; }
-h2 { font-size: 2em; margin: 2rem 0 1rem 0; }
+h2 { font-size: 1.75em; margin: 1.75rem 0 1rem 0; }
 h3 { font-size: 1.5em; margin: 0 0 1rem 0; }
 h4 { font-size: 1.2em; margin: 1rem 0; }
 
@@ -27,7 +27,7 @@ a, a:visited { color: #00A1CE; }
 .space-above { margin-top: 1em; }
 .space-below { margin-bottom: 1em; }
 
-.meta, .dashlet-item-info { font-size: 0.6875rem; color: #859393; text-transform: uppercase; }
+.meta, .dashlet-item-info { font-size: 0.75rem; color: #859393; text-transform: uppercase; }
 .meta em { font-style: normal; font-weight: 400; color: #121212; }
 
 .typography { font-family: Roboto; }

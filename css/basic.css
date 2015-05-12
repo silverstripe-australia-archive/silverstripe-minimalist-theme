@@ -57,18 +57,19 @@ button.no-style, button.no-style:hover, button.no-style:focus, buttton.no-style:
 
 a. { color: #428bca; }
 a.button.outline.white { border-color: #fff; }
-.button.outline { color: #996699; border: 1px solid; background: transparent; }
+.button.outline { color: #00a1ce; border: 1px solid; background: transparent; }
 
 /* Off-canvas menu */
 
 .off-canvas-wrap > .inner-wrap { min-height: 100vh; }
 .move-left > .inner-wrap { transform: translate3d(-50%, 0px, 0px); }
-.right-off-canvas-menu { background: #1D2633; width: 50%; }
+.move-left .exit-off-canvas { box-shadow: none; }
+.right-off-canvas-menu { background: #008DB5; width: 50%; }
 ul.off-canvas-list li a { border-bottom: 1px solid rgba(255,255,255,0.1); padding-left: 1rem; padding-right: 1rem; color: #fff; }
 ul.off-canvas-list li a:hover { background: rgba(255,255,255,0.2); }
-.off-canvas-list li span.label { display: block; height: 2.8125rem; background: transparent;  text-transform: uppercase; line-height: 2.8125rem; }
-.off-canvas-list li.back { height: 2.8125rem; line-height: 2.8125rem; }
-.right-submenu { width: 100%; background: #1D2633; }
+.off-canvas-list li span.label { display: block; height: 3rem; background: transparent;  text-transform: uppercase; line-height: 2.8125rem; text-align: left; padding-left: 1rem; }
+.off-canvas-list li.back { height: 3rem; line-height: 2.8125rem; }
+.right-submenu { width: 100%; background: #008DB5; }
 .right-submenu .back > a, .right-submenu .back > a:hover { padding: 0 0.5rem 0 0; background: transparent; color: #fff; border-top: 0 none; font-weight: normal; }
 .right-submenu .back > a:after { content: ''; margin: 0; display: none; }
 
@@ -99,7 +100,15 @@ ul.off-canvas-list li a:hover { background: rgba(255,255,255,0.2); }
 .f-dropdown .select2 li:hover, .f-dropdown .select2 li:focus { background: transparent; }
 
 /* Tables */
+
 table tr th, table tr td { font-size: 1rem; }
+
+/* Pagination */
+
+ul.pagination li span { display: inline-block; padding: 0.0625rem 0.625rem; }
+ul.pagination li a, ul.pagination li button { color: #00a1ce; }
+ul.pagination li.unavailable span, ul.pagination li.unavailable button { color: #859393; }
+ul.pagination li.current span, ul.pagination li.current button { background-color: #859393; color: #fff; }
 
 /* ---------------------------------------------------------------------*/
 /* Forms and buttons                                                     
@@ -121,7 +130,7 @@ fieldset > .field { margin-bottom: 1rem; }
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
-	font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+	font-family: Roboto,Arial,"Helvetica Neue",Helvetica,sans-serif;
 	font-size: 1rem;
 	font-weight: normal;
 	line-height: normal;
@@ -222,11 +231,12 @@ label.left { float: none !important; }
 /* General layout elements                                                     
    ---------------------------------------------------------------------*/
 
-header .top-bar { background: #273344; }
+header .top-bar { background: #273344; height: 3rem; }
 header .top-bar-section ul.dropdown { background: #273344; }
 header .top-bar-section ul li { background: transparent; }
-header .top-bar-section ul li.icon > a { font-size: 1.25rem; background: transparent; }
-header .top-bar-section li:not(.has-form) a:not(.button) { background: transparent; }
+header .top-bar-section ul li > a { font-family: Roboto, Arial, Helvetica, sans-serif; }
+header .top-bar-section ul li.icon > a { font-size: 1.5rem; background: transparent; line-height: 1.5; }
+header .top-bar-section li:not(.has-form) a:not(.button) { background: transparent; height: 3rem; }
 header .top-bar-section .dropdown li:hover > a:hover { background: rgba(0,0,0,0.75); }
 header .top-bar-section li:not(.has-form) a:hover:not(.button) { background: rgba(255,255,255,0.15); }
 
@@ -332,7 +342,7 @@ body.Calendar h2 { text-transform: uppercase; }
 #Form_getDateFilterForm .clear { display: none; }
 
 .banner.news-features { max-height: 40rem; padding: 1.75rem 0; background: #D6E2E2; overflow: hidden; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out;}
-.news-features.collapsed { max-height: 4rem; padding-top: 0; }
+.news-features.collapsed { max-height: 5rem; padding-top: 0; }
 
 .news-features .panel { background: #fff; border: 0 none; padding: 0; margin-bottom: 0; }
 .news-features .panel .overview { padding: 1rem; }
@@ -348,10 +358,13 @@ body.Calendar h2 { text-transform: uppercase; }
 .news-list-item .content { margin-left: 220px; }
 .news-list-item .abstract { width: 70%; }
 
+.MediaPage .slide > div:first-child { font-size: 0.75rem; text-transform: uppercase; padding-bottom: 0.75rem; padding-top: 0.375rem; }
+
 /* ---------------------------------------------------------------------*/
 /* Microblog / commenting                                                     
    ---------------------------------------------------------------------*/
 
+.comment-list-trigger { text-align: center; border: 0 none; }
 .comment-list-trigger .comment-count { background: #8C9CA5; font-size: 0.78571rem; font-family: "Courier New", Courier, monospace; line-height: 1; padding: 2px; min-width: 1.5rem; position: absolute; bottom: 0; right: 0; margin-right: -1rem; color: #fff; -webkit-border-radius: 1rem; -moz-border-radius: 1rem; border-radius: 1rem; }
 
 .comment-count-0 { display: none; }
@@ -364,6 +377,7 @@ form.replyForm .Actions .toggle-reply { }
 
 #StatusFeed div.microPost { background: transparent; position: relative; }
 #StatusFeed div.microPost.toplevel, #StatusFeed div.microPost.hasparent { border: 0 none; padding: 0; margin: 0; }
+div.microPostContent { overflow: hidden; }
 div.microPost.unread { box-shadow: none; }
 #StatusFeed, .timeline-container #StatusFeed { background: transparent; padding: 0; }
 .microPost div.postOptions { float: none; }
@@ -378,9 +392,11 @@ div.postText { padding: 0 0 1.75rem 0; }
 .microPost .author .details { margin-bottom: 0; }
 .microPost .author .details > span:first-child { font-size: 1.25rem; font-weight: 700; display: inline-block; padding-right: 0.5rem; }
 .postOptions .deletePost, .postOptions .editButton, .permaLink .title { text-transform: uppercase; font-size: 0.6875rem; }
+.microPost .author a, .microPost .postOptions a { font-weight: 400; }
 
 .postReplies { margin-top: 1.75rem; }
 #StatusFeed div.microPost.hasparent { border-top: 0 none; }
+#StatusFeed div.microPost.hasparent .microPostContent { overflow: hidden; }
 .microPost.hasparent .deletePost { margin-left: 0.5rem; }
 #StatusFeed .hasparent .author, .hasparent .author .details, .microPost.hasparent div.postOptions { display: inline-block; border-top: 0 none; }
 .microPost.hasparent .author .details > span { font-size: 1rem; padding-right: 0.5rem; }
@@ -388,7 +404,6 @@ div.postText { padding: 0 0 1.75rem 0; }
 
 .collapsed-post div.author {
 	display: inline;
-	
 }
 
 #StatusFeed .collapsed-post .author, #StatusFeed .collapsed-post div.postText {

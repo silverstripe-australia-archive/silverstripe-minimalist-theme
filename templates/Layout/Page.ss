@@ -7,8 +7,9 @@
 			$Form
 		</div>
 		<div class="large-3 columns">
-			<div class="actions-panel" data-saveable-info="$ClassName-$ID"></div>
-			<% include Commenter Targeted=1 %>
+			<div class="actions-panel" data-saveable-info="$ClassName-$ID">
+				<% include Commenter Targeted=1 %>
+			</div>
 		</div>
 	</div>
 </section>

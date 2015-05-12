@@ -32,6 +32,7 @@
 						<div class="overview">
 							<h3>$Title</h3>
 							<p><% if $Abstract %>$Abstract<% else %>$Content.LimitWordCount(25)<% end_if %></p>
+							<p><a class="button outline tiny more-link" href="$Link">Read article</a></p>
 						</div>
 					</div>
 				</div>
@@ -70,20 +71,24 @@
 					<% end_loop %>
 					
 					<% if $PaginatedChildren(10).MoreThanOnePage %>
-						<nav class="pagination">
-							<ul>
+						<nav>
+							<ul class="pagination">
 								<% if $PaginatedChildren(10).NotFirstPage %>
 									<li><a href="$PaginatedChildren(10).PrevLink">Previous</a></li>
 								<% end_if %>
 								<% loop $PaginatedChildren(10).Pages %>
 									<% if $CurrentBool %>
-										<span>$PageNum</span>
+										<li class="current"><span>$PageNum</span></li>
 									<% else %>
-										<span><a href="$Link">$PageNum</a></span>
+										<% if $Link %>
+											<li><a href="$Link">$PageNum</a></li>
+										<% else %>
+											<li class="unavailable"><span>&hellip;</span></li>
+										<% end_if %>
 									<% end_if %>
 								<% end_loop %>
 								<% if $PaginatedChildren(10).NotLastPage %>
-									<span><a href="$PaginatedChildren(10).NextLink">Next</a></span>
+									<li><a href="$PaginatedChildren(10).NextLink">Next</a></li>
 								<% end_if %>
 							</ul>
 						</nav>
