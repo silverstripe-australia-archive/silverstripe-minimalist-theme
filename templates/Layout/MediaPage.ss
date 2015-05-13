@@ -36,6 +36,18 @@
 				</ul>
 			<% end_if %>
 
+			<% if $Categories %>
+			<dl class="tags">
+				<dt><span class="typcn typcn-tags"></span> Categories</dt>
+				<dd>
+					<ul class="inline-list tight">
+						<% loop $Categories %>
+							<li><a class="label round outline" href="{$Up.getParent.Link}?category={$Title.URLATT}">$Title</a></li>
+						<% end_loop %>
+					</ul>
+				</dd>
+			</dl>
+			<% end_if %>
 			<% if $Tags %>
 			<dl class="tags">
 				<dt><span class="typcn typcn-tags"></span> Tags</dt>
