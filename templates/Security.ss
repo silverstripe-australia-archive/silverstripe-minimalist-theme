@@ -3,7 +3,7 @@
     <head>
         <% base_tag %>
         <meta charset="utf-8">
-        <title>Intranet Demo</title>
+        <title>Community Demo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<% require themedCSS(foundation-min) %>

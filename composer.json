@@ -1,6 +1,6 @@
 {
     "name": "silverstripe-australia/minimalist-theme",
-    "description": "A minimalist theme oriented towards intranets",
+    "description": "A minimalist theme oriented towards community platforms.",
     "type": "silverstripe-theme",
     "keywords": ["silverstripe", "theme"],
     "license": "BSD-3-Clause",
