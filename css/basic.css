@@ -375,16 +375,16 @@ div.postForm.f-dropdown > form { padding: 1rem; background: #f2f3f5; }
 form.replyForm .Actions { padding-top: 1rem; }
 form.replyForm .Actions .toggle-reply { }
 
-#StatusFeed div.microPost { background: transparent; position: relative; }
-#StatusFeed div.microPost.toplevel, #StatusFeed div.microPost.hasparent { border: 0 none; padding: 0; margin: 0; }
+.StatusFeed div.microPost { background: transparent; position: relative; }
+.StatusFeed div.microPost.toplevel, .StatusFeed div.microPost.hasparent { border: 0 none; padding: 0; margin: 0; }
 div.microPostContent { overflow: hidden; }
 div.microPost.unread { box-shadow: none; }
-#StatusFeed, .timeline-container #StatusFeed { background: transparent; padding: 0; }
+.StatusFeed, .timeline-container .StatusFeed { background: transparent; padding: 0; }
 .microPost div.postOptions { float: none; }
 div.postText, div.postPreview { padding: 0; }
 div.postText { padding: 0 0 1.75rem 0; }
 
-#StatusFeed .author, #StatusFeed div.postText { float: none; padding: 1rem 0; border-top: 2px solid; }
+.StatusFeed .author, .StatusFeed div.postText { float: none; padding: 1rem 0; border-top: 2px solid; }
 .toplevel > .columns > .author:after { content: ''; display: block; width: 1.875rem; height: 2px; background: #000000; position: absolute; top: 0; right: -0.9375rem; }
 .details span.edited-mark { font-size: 1em; font-weight: normal; }
 .editButton, .deletePost, .details abbr.postTime { display: inline-block; }
@@ -395,18 +395,18 @@ div.postText { padding: 0 0 1.75rem 0; }
 .microPost .author a, .microPost .postOptions a { font-weight: 400; }
 
 .postReplies { margin-top: 1.75rem; }
-#StatusFeed div.microPost.hasparent { border-top: 0 none; }
-#StatusFeed div.microPost.hasparent .microPostContent { overflow: hidden; }
+.StatusFeed div.microPost.hasparent { border-top: 0 none; }
+.StatusFeed div.microPost.hasparent .microPostContent { overflow: hidden; }
 .microPost.hasparent .deletePost { margin-left: 0.5rem; }
-#StatusFeed .hasparent .author, .hasparent .author .details, .microPost.hasparent div.postOptions { display: inline-block; border-top: 0 none; }
+.StatusFeed .hasparent .author, .hasparent .author .details, .microPost.hasparent div.postOptions { display: inline-block; border-top: 0 none; }
 .microPost.hasparent .author .details > span { font-size: 1rem; padding-right: 0.5rem; }
-#StatusFeed .hasparent div.postText { border-top: 0 none; }
+.StatusFeed .hasparent div.postText { border-top: 0 none; }
 
 .collapsed-post div.author {
 	display: inline;
 }
 
-#StatusFeed .collapsed-post .author, #StatusFeed .collapsed-post div.postText {
+.StatusFeed .collapsed-post .author, .StatusFeed .collapsed-post div.postText {
 	border-top: none;
 }
 .collapsed-post div.author p + p, .collapsed-post div.post-actions, .collapsed-post div.postOptions {
@@ -474,7 +474,7 @@ ul.slides { margin: 1.25rem 0; padding: 0; list-style: none; }
 		display: inline-block;
 	}
 	
-	#StatusFeed .microPost .author {
+	.StatusFeed .microPost .author {
 		border: none;
 	}
 	

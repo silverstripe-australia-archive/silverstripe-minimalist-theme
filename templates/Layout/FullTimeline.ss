@@ -1,49 +1,45 @@
 <section class="main typography content-start">
 	
+	<div class="timeline-box">
 	<input type="hidden" id="MemberDetails" data-member='$MemberDetails.ATT' />
 	<input type="hidden" value="$PostForm.FormAction" id="PostFormUrl" />
-
-	<div class="row">
-		<div class="large-12 columns">
-		<% if $ContextUser %>
-			<div class="uploadForm">
-				<% with $UploadForm %>
-					<form $FormAttributes>
-						<% with FieldMap %>
-							$Attachment
-						<% end_with %>
-						<ul id="uploadedFiles"></ul>
-						$HiddenFields
-					</form>
-				<% end_with %>
-			</div>
-		<% end_if %>
-		</div>
-	</div>
-		
-	<input type="hidden" name="timelineUpdateUrl" value="$Link(flatlist)" />
+	
 
 	<% if $Post %>
-		<div id="StatusFeed" class="autorefresh row">
+		<input type="hidden" name="timelineUpdateUrl" value="$Link(flatlist)/$Post" />
+		<div class="StatusFeed autorefresh row">
 			<div class="large-12 columns">
 				$Timeline
 			</div>
 		</div>
 	<% else %>
+		<input type="hidden" name="timelineUpdateUrl" value="$Link(flatlist)" />
 		<% if $ContextUser %>
 			<div class="row">
 				<div class="large-12 columns">
 					
 					<div class="postForm content large" id="post-something">
 						<% with PostForm %>
-							<% include PostForm %>
+							<% include PostForm Options=$Top.Options %>
 						<% end_with %>
 					</div>
 				</div>
 			</div>
+
+			<% if $Top.Options.EnableUploads %>
+			<% with UploadForm %>
+			<form $FormAttributes >
+			$HiddenFields
+			<% with FieldMap %>
+			$Attachment.FieldHolder
+			<% end_with %>
+			</form>
+			<% end_with %>
+			<% end_if %>
+
 		<% end_if %>
 
-		<div id="StatusFeed" class="autorefresh row">
+		<div class="StatusFeed autorefresh row">
 			<div class="large-12 columns">
 				$Timeline
 			</div>
@@ -56,5 +52,5 @@
 		</div>
 
 	<% end_if %>
-
+	</div>
 </section>
