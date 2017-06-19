@@ -1,5 +1,5 @@
 {
-    "name": "silverstripe-australia/minimalist-theme",
+    "name": "symbiote-library/silverstripe-minimalist-theme",
     "description": "A minimalist theme oriented towards community platforms.",
     "type": "silverstripe-theme",
     "keywords": ["silverstripe", "theme"],
@@ -16,6 +16,9 @@
 		"silverstripe-australia/minimalist-theme-helper": "~1.0"
     },
 	"extra": {
-		"installer-name": "ssau-minimalist"
+		"installer-name": "ssau-minimalist",
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
     }
 }
