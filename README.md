@@ -4,4 +4,4 @@
 
 ## Install
 
-Via composer: "silverstripe-australia/minimalist-theme": "dev-master"
+Via composer: "symbiote-library/silverstripe-minimalist-theme": "dev-master"

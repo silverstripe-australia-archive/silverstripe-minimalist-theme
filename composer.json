@@ -13,7 +13,7 @@
     "require": {
         "composer/installers": "*",
         "silverstripe/framework": ">=3.0",
-		"silverstripe-australia/minimalist-theme-helper": "~1.0"
+		"symbiote-library/silverstripe-minimalist-theme-helper": "~1.0"
     },
 	"extra": {
 		"installer-name": "ssau-minimalist",
