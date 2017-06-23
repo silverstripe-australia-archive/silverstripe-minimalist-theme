@@ -1,5 +1,5 @@
-<% require javascript(themes/ssau/js/jquery.equalheights.js) %>
-<% require javascript(themes/ssau/js/oridomi.js) %>
+<% require javascript(themes/symbiote/js/jquery.equalheights.js) %>
+<% require javascript(themes/symbiote/js/oridomi.js) %>
 
 <div class="date-filter middle-collapse dark-mid">
 	<h1>$Title</h1>

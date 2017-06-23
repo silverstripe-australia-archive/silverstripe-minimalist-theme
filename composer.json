@@ -7,7 +7,7 @@
     "authors": [
         {
             "name": "Grant Heggie",
-            "homepage": "http://www.silverstripe.com.au"
+            "homepage": "http://www.symbiote.com.au"
         }
     ],
     "require": {
@@ -16,7 +16,7 @@
 		"symbiote-library/silverstripe-minimalist-theme-helper": "~1.0"
     },
 	"extra": {
-		"installer-name": "ssau-minimalist",
+		"installer-name": "symbiote-minimalist",
         "branch-alias": {
             "dev-master": "2.0.x-dev"
         }

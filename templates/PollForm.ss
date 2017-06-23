@@ -8,7 +8,7 @@
 	<% else %>
 		<% if $ShouldShowResults %>
 			<p>Thanks for your vote!</p>
-			<p>And for the scavengers out there, the final answer is</p><p>SilverStripe Australia</p>
+			<p>And for the scavengers out there, the final answer is</p><p>Symbiote</p>
 		<% else %>
 			$DefaultForm
 		<% end_if %>

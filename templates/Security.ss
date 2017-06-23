@@ -43,7 +43,7 @@
 		})(jQuery);
 		//]]>
 		</script>
-		<% require javascript(themes/ssau-minimalist/js/foundation.min.js) %>
+		<% require javascript(themes/symbiote-minimalist/js/foundation.min.js) %>
 	</body>
 </html>
 
