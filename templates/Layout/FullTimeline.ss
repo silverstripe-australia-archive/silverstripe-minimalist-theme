@@ -1,4 +1,4 @@
-<section class="main typography content-start">
+<section class="main typography content-start timeline-box">
 	
 	<div class="timeline-box">
 	<input type="hidden" id="MemberDetails" data-member='$MemberDetails.ATT' />
