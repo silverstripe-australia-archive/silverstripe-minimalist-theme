@@ -49,4 +49,4 @@
 	</div>
 </div>
 
-<% require javascript('themes/symbiote-minimalist/Calendar.js') %>
+<% require javascript('themes/minimalist-theme/Calendar.js') %>

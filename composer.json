@@ -16,7 +16,7 @@
 		"symbiote-library/silverstripe-minimalist-theme-helper": "~1.0"
     },
 	"extra": {
-		"installer-name": "symbiote-minimalist",
+		"installer-name": "minimalist-theme",
         "branch-alias": {
             "dev-master": "2.0.x-dev"
         }
